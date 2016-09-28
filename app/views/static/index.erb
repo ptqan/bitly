@@ -1,2 +1,18 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<% if @flash_msg %>
+<%= @flash_msg %>
+<% end %>
+
+<ol>
+<% @urls.each do |x|%>
+	<li><%= x.long_url %> | 
+		<a href="<%= x.long_url %>">bitly/<%= x.short_url %></a></li>
+	<% end %>
+</ol>	
+
+<form action="/urls" method="post">
+	Enter URLs:
+	<input type="text" name="url">
+	<input type="submit" value="Shorten this">
+</form>
+
+

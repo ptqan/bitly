@@ -27,6 +27,12 @@ gem 'byebug'
 # Adding rspec for running unit testing
 gem 'rspec'
 
+# Sass & Compass
+gem 'sass'
+gem 'compass'
+
+
+
 group :development, :test do
 	# Adding shotgun for local web hosting
 	gem 'shotgun'

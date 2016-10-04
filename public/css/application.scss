@@ -1,0 +1,140 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+
+$font-stack:    'Roboto', sans-serif;
+$header_fonts: 'Montserrat', sans-serif;
+$primary-color: #000000;
+$top_spacing: 20px;
+$border: 1px solid #EBEBEB;
+
+
+body {
+  font: 14px $font-stack;
+  color: $primary-color;
+}
+
+h1 {
+	font-family: $header_fonts;
+	text-transform:uppercase;
+	font-weight:700;
+
+}
+
+#header {
+	margin-top: $top_spacing;
+	padding-bottom: $top_spacing;
+
+	.header-info {
+		text-align:center;
+		margin-top:10px;
+	}
+}
+
+#navigation {
+	margin-top: $top_spacing;
+	color:#EBEBEB;
+
+
+	.container{
+		border-top:$border;
+
+	}
+
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+		border:none;
+		background-color:none;
+		display:none;
+	}
+
+	.navbar-inverse {
+		background:none;
+		border:none;
+	}
+
+	.navbar {
+		text-align:center;
+	}
+	
+}
+
+#content {
+	.form_bitly {
+		text-align:center;
+		border:$border;
+		background-color:#000000;
+		color:#FFFFFF;
+		padding:40px;
+
+		span {
+			font-size:20px;
+		}
+
+		input[type="text"] {
+			padding:20px;
+			width:50%;
+			color:#000000;
+		}
+
+		input[type="submit"] {
+			padding:20px; 
+	    background:#D96D00; 
+	    border:0 none;
+	    cursor:pointer;
+	    -webkit-border-radius: none;
+	    border-radius: none;
+	    font-size:16px;
+	    color:#FFFFFF;
+		}
+
+		.info {
+			margin-top:$top_spacing;
+			padding-bottom: $top_spacing;
+		}
+	}
+
+	.output_bitly {
+		border:$border;
+		color:#000000;
+		margin-top:$top_spacing;
+		padding:40px;
+
+
+		table tr {
+			border-top:$border;
+			border-bottom:$border;
+		}
+
+		table th {
+			padding:20px;
+		}
+
+		table td {
+			padding:10px 20px;
+		}
+
+		table td, table th {
+			border-right:$border;
+		}
+
+		table td:first-child, table th:first-child {
+			border-left:$border;
+		}
+
+	}
+}
+
+#footer {
+	.container {
+		margin-top:$top_spacing;
+		padding-top:$top_spacing;
+		border-top:$border;
+		text-align:center;
+		padding-bottom:$top_spacing;
+	}
+
+	.footer {
+		margin-top:0px;
+	}
+}
+
+

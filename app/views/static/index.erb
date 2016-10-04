@@ -1,18 +1,46 @@
-<% if @flash_msg %>
-<%= @flash_msg %>
-<% end %>
+<div class="form_bitly">
+	<form id="target" action="/urls" method="post">
+		<div class="info">
+			<h1>Too long for a link? Shorten it here</h1>
+			<p>Own your links with bitly, we will shorten your full link with a click of a button</p>
+		</div>
+		<input type="text" name="url">
+		<input type="submit" value="Shorten this">
+	</form>
+</div>
 
-<ol>
-<% @urls.each do |x|%>
-	<li><%= x.long_url %> | 
-		<a href="<%= x.long_url %>">bitly/<%= x.short_url %></a></li>
-	<% end %>
-</ol>	
 
-<form action="/urls" method="post">
-	Enter URLs:
-	<input type="text" name="url">
-	<input type="submit" value="Shorten this">
-</form>
 
+<div class="output_bitly" style="position:relative; padding-bottom:20px;">
+	<div class="introduction">
+		<h1 style="cursor:pointer">Introduction Paragraph</h1>
+		<p>Praesent molestie varius mattis. Aenean in est quis dui hendrerit egestas ac ut arcu. Pellentesque sollicitudin ac orci ut semper. Suspendisse eget turpis justo. Etiam eros nisi, gravida sed mauris vel, porttitor porta metus. Nunc viverra velit tempus mauris finibus, at congue diam pretium. Phasellus luctus non libero vel interdum.</p>
+	</div>
+
+	<div class="info">
+		<h1>Your Results</h1>
+	</div>
+
+ <table style="width:100%" class="results">
+		<tr>
+			<th>Long URL</td>
+			<th>Your Shorten URL</td>
+			<th>Click count</th>
+		</tr>
+		<% @urls.each do |x|%>
+		<tr>
+			<td width="33.3%"><%= x.long_url %></td>
+			<td width="33.3%"><a href="<%= x.short_url %>">http://bitly.es/<%= x.short_url %></a></td>
+			<td><%= x.url_count %></td>
+		</tr>
+		<% end %>
+	</table>
+
+	<div class="info" style="margin-top:20px;">
+		<p>Click <a href="#" class="ui-open">here</a> to view the results</p>
+		<p>Click <a href="#" class="ui-close">here</a> to close the results</p>
+	</div>
+
+		
+</div>
 
